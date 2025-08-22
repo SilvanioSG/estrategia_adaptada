@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estratégia Adaptada — Relatório Técnico</title>
+  <style>
+    :root {
+      /* Definição de variáveis de cores para fácil manutenção */
+      --cor-principal: #27628d;
+      --cor-secundaria: #eaeaea;
+      --cor-fundo: #f9f9f9;
+      --cor-texto: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+      margin: 0;
+      padding: 0;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--cor-principal);
+      color: white;
+      padding: 30px 20px; /* Mais padding para destaque */
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra mais sutil */
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em; /* Tamanho de fonte maior */
+    }
+
+    header p {
+      margin: 8px 0;
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      background: var(--cor-secundaria);
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    nav h2 {
+      margin-top: 0;
+      color: var(--cor-principal);
+      font-size: 1.5em;
+    }
+
+    nav p {
+      margin: 10px 0 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: inline-block;
+      text-align: left;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--cor-principal);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1a4a6b; /* Cor mais escura ao passar o mouse */
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      color: var(--cor-principal);
+      border-bottom: 2px solid var(--cor-principal);
+      padding-bottom: 8px;
+      margin-bottom: 25px; /* Espaço após o título */
+      font-size: 1.8em;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px; /* Cantos mais arredondados */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
+      padding: 30px; /* Mais espaço interno */
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.01); /* Efeito de elevação sutil */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra maior ao passar o mouse */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    table th {
+      background: var(--cor-principal);
+      color: white;
+      font-weight: normal;
+    }
+
+    table tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    table tr:hover {
+      background: #e6f2f8;
+    }
+
+    blockquote {
+      border-left: 5px solid var(--cor-principal);
+      margin: 25px 0;
+      padding: 20px 20px 20px 30px;
+      color: #444;
+      font-style: italic;
+      background: #f0f8ff;
+      text-align: center;
+      border-radius: 8px; /* Arredondamento */
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--cor-principal);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px; /* Mais arredondado */
+      font-size: 13px;
+      margin: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    #competencias .card {
+      text-align: center;
+    }
+
+    footer {
+      background-color: var(--cor-principal);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1em;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .top-link {
+      display: block;
+      text-align: right;
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+
+    .top-link a {
+      color: var(--cor-principal);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .top-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Silvanio Gois</h1>
+    <p>Técnico em Administração e Edificações | Graduando em Processos Gerenciais</p>
+    <p>Email: sg@silvaniogois.com.br | Site: <a href="https://www.silvaniogois.com.br">www.silvaniogois.com.br</a></p>
+  </header>
+  <nav>
+    <h2>Sumário</h2>
+    <p>Use os links abaixo para navegar até cada seção do documento.</p>
+    <ul>
+      <li><a href="#objetivo">Objetivo</a></li>
+      <li><a href="#fundamentos">Fundamentos Clássicos</a></li>
+      <li><a href="#adaptacao">Adaptação Moderna</a></li>
+      <li><a href="#aplicacoes">Aplicações Práticas</a></li>
+      <li><a href="#frameworks">Frameworks e Ferramentas</a></li>
+      <li><a href="#competencias">Resumo de Competências</a></li>
+      <li><a href="#conclusao">Conclusão Executiva</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="objetivo">
+      <h2>Objetivo</h2>
+      <div class="card">
+        <p>Este documento mostra de forma prática como aplico princípios clássicos da estratégia em cenários modernos de liderança e gestão. Minha leitura conecta autores como Sun Tzu, Maquiavel e Drucker às necessidades atuais de negócios, deixando claro meu diferencial: transformar teoria em ação coerente e resultados concretos.</p>
+      </div>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+    <section id="fundamentos">
+      <h2>Fundamentos Clássicos</h2>
+      <div class="card">
+        <p>Autores fundamentais como Maquiavel, Sun Tzu e Clausewitz oferecem lições sobre poder, estratégia e conflito que permanecem atemporais. Já Drucker e Goleman trazem o olhar organizacional e humano para dentro da gestão. Minha abordagem consiste em reinterpretar esses pilares à luz do ambiente empresarial atual.</p>
+      </div>
+      <blockquote>“Conhecer a si mesmo e o mercado é meio caminho andado para a vitória.” (Adaptado de Sun Tzu)</blockquote>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+    <section id="adaptacao">
+      <h2>Adaptação Moderna</h2>
+      <div class="card">
+        <p>No contexto atual, a estratégia deve ser ágil e adaptativa. Isso significa aplicar conceitos clássicos em ambientes digitais, globais e incertos. O mundo vive em um cenário <strong>VUCA (Volátil, Incerto, Complexo e Ambíguo)</strong>, exigindo líderes que unam disciplina e flexibilidade. Liderar hoje exige menos comando-controle e mais criação de contextos para equipes autônomas.</p>
+      </div>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+    <section id="aplicacoes">
+      <h2>Aplicações Práticas</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Gestão de Conflitos:</strong> aplico a inteligência emocional (Goleman) para resolver disputas sem comprometer a produtividade.</li>
+          <li><strong>Planejamento de Expansão:</strong> uso os princípios de timing de Sun Tzu para definir o momento certo de avançar.</li>
+          <li><strong>Negociações:</strong> aplico a leitura política de Maquiavel para mapear interesses ocultos e negociar com clareza.</li>
+        </ul>
+      </div>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+    <section id="frameworks">
+      <h2>Frameworks e Ferramentas</h2>
+      <div class="card">
+        <table>
+          <tr>
+            <th>Framework</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td>SWOT (Strengths, Weaknesses, Opportunities, Threats / Forças, Fraquezas, Oportunidades, Ameaças)</td>
+            <td>Análise de forças, fraquezas, oportunidades e ameaças para decisões estratégicas.</td>
+          </tr>
+          <tr>
+            <td>OKR (Objectives and Key Results / Objetivos e Resultados-Chave)</td>
+            <td>Metodologia para definição de objetivos e resultados-chave, garantindo foco.</td>
+          </tr>
+          <tr>
+            <td>BSC (Balanced Scorecard / Indicadores Balanceados de Desempenho)</td>
+            <td>Ferramenta de gestão que conecta objetivos estratégicos a indicadores de desempenho.</td>
+          </tr>
+          <tr>
+            <td>5 Forças de Porter</td>
+            <td>Análise do ambiente competitivo e das pressões que afetam a rentabilidade.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+    <section id="competencias">
+      <h2>Resumo de Competências Estratégicas</h2>
+      <div class="card">
+        <span class="badge">Análise Crítica</span>
+        <span class="badge">Adaptação</span>
+        <span class="badge">Execução</span>
+        <span class="badge">Visão Sistêmica</span>
+        <span class="badge">Clareza Técnica</span>
+      </div>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+    <section id="conclusao">
+      <h2>Conclusão Executiva</h2>
+      <div class="card">
+        <p>Minha leitura estratégica une análise crítica, adaptação e execução prática. Mais do que citar teorias, aplico conceitos de forma clara para transformar desafios em resultados. Esta síntese entre clássicos e práticas modernas representa a base do meu diferencial como gestor e estrategista.</p>
+      </div>
+      <div class="top-link"><a href="#top">↑ Voltar ao topo</a></div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Silvanio Gois — Todos os direitos reservados | <a href="https://www.silvaniogois.com.br">Retornar ao site</a></p>
+  </footer>
+</body>
+</html>
