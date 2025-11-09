@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estratégia Adaptada — Relatório Técnico</title>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <title>Estrategista Híbrido: Conectando Clássicos da Gestão e Frameworks Modernos</title> 
   <style>
     :root {
       /* Definição de variáveis de cores para fácil manutenção */
@@ -12,91 +12,66 @@
       --cor-fundo: #f9f9f9;
       --cor-texto: #333;
     }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       background-color: var(--cor-fundo);
       color: var(--cor-texto);
       line-height: 1.6;
     }
-
     header {
       background-color: var(--cor-principal);
       color: white;
-      padding: 30px 20px; /* Mais padding para destaque */
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra mais sutil */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-    /* Estilo para o contêiner da imagem e informações no cabeçalho */
-    .header-content {
-        display: flex;
-        flex-direction: column; /* Padrão em colunas para telas menores */
-        align-items: center;
-        justify-content: center;
-        max-width: 960px; /* Limita a largura do conteúdo do cabeçalho */
-        margin: 0 auto;
+    
+    /* ESTILOS DA IMAGEM E TÍTULO (MANTIDOS) */
+    .profile-image {
+      margin-bottom: 15px; 
     }
-
-    /* Estilo para a imagem de perfil */
-    .profile-photo {
-        width: 150px; /* Tamanho da foto */
-        height: 150px;
-        border-radius: 50%; /* Torna a imagem circular */
-        object-fit: cover;
-        border: 4px solid white; /* Borda branca para destacar */
-        margin-bottom: 20px; /* Espaço abaixo da foto */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    .profile-image img {
+      width: 150px; 
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white; 
+      object-fit: cover; 
+      display: block;
+      margin: 0 auto;
     }
-
-    .header-info {
-        text-align: center;
+    @media (max-width: 600px) {
+        .profile-image img {
+            width: 120px; 
+            height: 120px;
+        }
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.2em; /* Tamanho de fonte ajustado */
+      font-size: 2em;
     }
-
+    header h2 {
+        margin: 15px 0 5px;
+        font-size: 1.5em; 
+        color: white;
+        opacity: 0.95;
+    }
     header p {
       margin: 8px 0;
       font-size: 0.9em;
       opacity: 0.9;
     }
-
+    /* Estilo para links dentro do HEADER */
     header a {
-      color: white;
+      color: white; /* Mantém a cor branca, pois o fundo é azul */
       text-decoration: none;
     }
-
     header a:hover {
       text-decoration: underline;
     }
-
-    /* Media query para telas maiores (desktop) */
-    @media (min-width: 768px) {
-        .header-content {
-            flex-direction: row; /* Alinha em linha em telas maiores */
-            text-align: left;
-        }
-
-        .profile-photo {
-            margin-right: 30px; /* Espaço à direita da foto */
-            margin-bottom: 0; /* Remove espaço inferior em desktop */
-        }
-
-        .header-info {
-            text-align: left; /* Alinha o texto à esquerda */
-        }
-
-        header h1 {
-            font-size: 2.5em; /* Aumenta um pouco mais no desktop */
-        }
-    }
+    /* FIM DOS ESTILOS DO HEADER */
     
-    /* Demais estilos do código original */
     nav {
       background: var(--cor-secundaria);
       padding: 20px 15px;
@@ -121,12 +96,12 @@
     }
     nav ul li a {
       text-decoration: none;
-      color: var(--cor-principal);
+      color: var(--cor-principal); /* Garante a cor principal no nav */
       font-weight: bold;
       transition: color 0.3s ease;
     }
     nav ul li a:hover {
-      color: #1a4a6b; /* Cor mais escura ao passar o mouse */
+      color: #1a4a6b;
       text-decoration: underline;
     }
     main {
@@ -141,20 +116,20 @@
       color: var(--cor-principal);
       border-bottom: 2px solid var(--cor-principal);
       padding-bottom: 8px;
-      margin-bottom: 25px; /* Espaço após o título */
+      margin-bottom: 25px;
       font-size: 1.8em;
     }
     .card {
       background: white;
-      border-radius: 12px; /* Cantos mais arredondados */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
-      padding: 30px; /* Mais espaço interno */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 30px;
       margin-bottom: 25px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-5px) scale(1.01); /* Efeito de elevação sutil */
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra maior ao passar o mouse */
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
     table {
       width: 100%;
@@ -184,15 +159,14 @@
       color: #444;
       font-style: italic;
       background: #f0f8ff;
-      text-align: center;
-      border-radius: 8px; /* Arredondamento */
+      border-radius: 8px;
     }
     .badge {
       display: inline-block;
       background: var(--cor-principal);
       color: white;
       padding: 6px 14px;
-      border-radius: 20px; /* Mais arredondado */
+      border-radius: 20px;
       font-size: 13px;
       margin: 4px;
       letter-spacing: 0.5px;
@@ -230,14 +204,14 @@
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <img src="Executivo_sg_projetos.PNG" alt="Foto de Perfil de Silvanio Gois" class="profile-photo">
-      <div class="header-info">
-        <h1>Silvanio Gois</h1>
-        <p>Técnico em Administração e Edificações | Graduando em Processos Gerenciais</p>
-        <p>Email: sg@silvaniogois.com.br | Site: <a href="https://www.silvaniogois.com.br">www.silvaniogois.com.br</a></p>
-      </div>
+    <div class="profile-image">
+        <img src="Executivo_sg_projetos.PNG" alt="Foto de perfil profissional de Silvanio Gois">
     </div>
+    
+    <h1>Silvanio Gois</h1>
+    <h2>Estrategista Híbrido: Conectando Clássicos da Gestão e Frameworks Modernos</h2>
+    <p>Técnico em Administração e Edificações | Graduando em Processos Gerenciais</p>
+    <p>Email: sg@silvaniogois.com.br | Site: <a href="https://www.silvaniogois.com.br" target="_blank">www.silvaniogois.com.br</a></p>
   </header>
   <nav>
     <h2>Sumário</h2>
@@ -334,7 +308,7 @@
     </section>
   </main>
   <footer>
-    <p>© 2025 Silvanio Gois — Todos os direitos reservados | <a href="https://www.silvaniogois.com.br">Retornar ao site</a></p>
+    <p>© 2025 Silvanio Gois — Todos os direitos reservados | <a href="https://www.silvaniogois.com.br" target="_blank">Retornar ao site</a></p>
   </footer>
 </body>
 </html>
