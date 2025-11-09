@@ -30,9 +30,34 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra mais sutil */
     }
 
+    /* Estilo para o contêiner da imagem e informações no cabeçalho */
+    .header-content {
+        display: flex;
+        flex-direction: column; /* Padrão em colunas para telas menores */
+        align-items: center;
+        justify-content: center;
+        max-width: 960px; /* Limita a largura do conteúdo do cabeçalho */
+        margin: 0 auto;
+    }
+
+    /* Estilo para a imagem de perfil */
+    .profile-photo {
+        width: 150px; /* Tamanho da foto */
+        height: 150px;
+        border-radius: 50%; /* Torna a imagem circular */
+        object-fit: cover;
+        border: 4px solid white; /* Borda branca para destacar */
+        margin-bottom: 20px; /* Espaço abaixo da foto */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-info {
+        text-align: center;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 2em; /* Tamanho de fonte maior */
+      font-size: 2.2em; /* Tamanho de fonte ajustado */
     }
 
     header p {
@@ -50,55 +75,68 @@
       text-decoration: underline;
     }
 
+    /* Media query para telas maiores (desktop) */
+    @media (min-width: 768px) {
+        .header-content {
+            flex-direction: row; /* Alinha em linha em telas maiores */
+            text-align: left;
+        }
+
+        .profile-photo {
+            margin-right: 30px; /* Espaço à direita da foto */
+            margin-bottom: 0; /* Remove espaço inferior em desktop */
+        }
+
+        .header-info {
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        header h1 {
+            font-size: 2.5em; /* Aumenta um pouco mais no desktop */
+        }
+    }
+    
+    /* Demais estilos do código original */
     nav {
       background: var(--cor-secundaria);
       padding: 20px 15px;
       text-align: center;
     }
-
     nav h2 {
       margin-top: 0;
       color: var(--cor-principal);
       font-size: 1.5em;
     }
-
     nav p {
       margin: 10px 0 20px;
     }
-
     nav ul {
       list-style: none;
       padding: 0;
       display: inline-block;
       text-align: left;
     }
-
     nav ul li {
       margin-bottom: 10px;
     }
-
     nav ul li a {
       text-decoration: none;
       color: var(--cor-principal);
       font-weight: bold;
       transition: color 0.3s ease;
     }
-
     nav ul li a:hover {
       color: #1a4a6b; /* Cor mais escura ao passar o mouse */
       text-decoration: underline;
     }
-
     main {
       padding: 40px 20px;
       max-width: 960px;
       margin: 0 auto;
     }
-
     section {
       margin-bottom: 50px;
     }
-
     h2 {
       color: var(--cor-principal);
       border-bottom: 2px solid var(--cor-principal);
@@ -106,7 +144,6 @@
       margin-bottom: 25px; /* Espaço após o título */
       font-size: 1.8em;
     }
-
     .card {
       background: white;
       border-radius: 12px; /* Cantos mais arredondados */
@@ -115,38 +152,31 @@
       margin-bottom: 25px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .card:hover {
       transform: translateY(-5px) scale(1.01); /* Efeito de elevação sutil */
       box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Sombra maior ao passar o mouse */
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
-
     table th, table td {
       border: 1px solid #ddd;
       padding: 12px;
       text-align: left;
     }
-
     table th {
       background: var(--cor-principal);
       color: white;
       font-weight: normal;
     }
-
     table tr:nth-child(even) {
       background: #f2f2f2;
     }
-
     table tr:hover {
       background: #e6f2f8;
     }
-
     blockquote {
       border-left: 5px solid var(--cor-principal);
       margin: 25px 0;
@@ -157,7 +187,6 @@
       text-align: center;
       border-radius: 8px; /* Arredondamento */
     }
-
     .badge {
       display: inline-block;
       background: var(--cor-principal);
@@ -168,11 +197,9 @@
       margin: 4px;
       letter-spacing: 0.5px;
     }
-
     #competencias .card {
       text-align: center;
     }
-
     footer {
       background-color: var(--cor-principal);
       color: white;
@@ -181,25 +208,21 @@
       font-size: 1em;
       margin-top: 50px;
     }
-
     footer a {
       color: white;
       text-decoration: underline;
     }
-
     .top-link {
       display: block;
       text-align: right;
       margin-top: 15px;
       font-size: 0.9em;
     }
-
     .top-link a {
       color: var(--cor-principal);
       text-decoration: none;
       font-weight: bold;
     }
-
     .top-link a:hover {
       text-decoration: underline;
     }
@@ -207,9 +230,14 @@
 </head>
 <body>
   <header>
-    <h1>Silvanio Gois</h1>
-    <p>Técnico em Administração e Edificações | Graduando em Processos Gerenciais</p>
-    <p>Email: sg@silvaniogois.com.br | Site: <a href="https://www.silvaniogois.com.br">www.silvaniogois.com.br</a></p>
+    <div class="header-content">
+      <img src="Executivo_sg_projetos.PNG" alt="Foto de Perfil de Silvanio Gois" class="profile-photo">
+      <div class="header-info">
+        <h1>Silvanio Gois</h1>
+        <p>Técnico em Administração e Edificações | Graduando em Processos Gerenciais</p>
+        <p>Email: sg@silvaniogois.com.br | Site: <a href="https://www.silvaniogois.com.br">www.silvaniogois.com.br</a></p>
+      </div>
+    </div>
   </header>
   <nav>
     <h2>Sumário</h2>
